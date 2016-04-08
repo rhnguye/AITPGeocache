@@ -6,13 +6,16 @@ import java.util.ArrayList;
  */
 public class User {
 
+    private long id;
     private String userName;
     private ArrayList<String> password;
     private ArrayList<String> wishList;
     private ArrayList<String> favoriteCaches;
+    private ArrayList<String> history;
 
-    public User(String username, ArrayList<String> pass)
+    public User(long id, String username, ArrayList<String> pass)
     {
+        this.id = id;
         userName = username;
         password = pass;
         wishList = new ArrayList<String>();
@@ -49,6 +52,14 @@ public class User {
 
     public void setFavoriteCaches(ArrayList<String> favoriteCaches) {
         this.favoriteCaches = favoriteCaches;
+    }
+
+    public ArrayList<String> getHistory() {
+        return history;
+    }
+
+    public void setHistory(ArrayList<String> history) {
+        this.history = history;
     }
 
     @Override
